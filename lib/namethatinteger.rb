@@ -4,26 +4,9 @@ lam3 = lambda { |x| x % 2 == 0}
 
 
 def detect_int(*lams)
-  return 1 if lams == []
-  counter = 1
-  lowarray = []
-    lams.all?{|x|
-      counter = 1
-      counter += 1 while x.call(counter) == false
-      lowarray << counter
-    }
-#print lowarray.sort
-
-while lams.all?{|x| x.call(lowarray.sort.last)} == false
-      counter = lowarray.sort.last
-lams.all?{|x|
-      lowarray =[]
-      puts counter
-      counter += 1 while x.call(counter) == false
-      lowarray << counter
-}
-end
-lowarray.last
+i = 1
+i += 1 until lams.map{|x| x.call(i)}.all?
+i
 end
 
 

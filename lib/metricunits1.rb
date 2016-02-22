@@ -1,15 +1,6 @@
 def meters(x)
-  hash = {
-    24=>"Ym",
-    21=>"Zm",
-    18=>"Em",
-    15=>"Pm",
-    12=> "Tm",
-    9 => "Gm",
-    6 => "Mm",
-    3 => "km",
-    1 => "m"
-  }
+  hash = {24=>"Ym",21=>"Zm",18=>"Em",15=>"Pm",12=>"Tm",
+            9 =>"Gm",6 =>"Mm",3 =>"km",1 =>"m"}
   x = x.to_i if x == x.to_i
   result = 0
   hash.each_key{|k|
